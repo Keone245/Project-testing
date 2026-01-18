@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body onload="requireLogin(); showUser();">
+<p id="welcome"></p>
+
+<form id="fanForm">
+  <select id="player">
+    <option>Vinícius Jr</option>
+    <option>Bellingham</option>
+    <option>Modrić</option>
+  </select>
+
+  <label><input type="radio" name="comp" value="La Liga" required> La Liga</label>
+  <label><input type="radio" name="comp" value="Champions League"> UCL</label>
+
+  <input type="number" id="since" required>
+  <button type="submit">Register</button>
+</form>
+
+<button onclick="logout()">Logout</button>
+<script src="script.js"></script>
+</body>
+</html>
