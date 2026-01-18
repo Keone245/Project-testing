@@ -77,3 +77,34 @@ function mostCommon(key) {
   }
   return result;
 }
+
+function checkRegistration() {
+  const currentFan = localStorage.getItem("currentFan");
+  const isRegistered = fans.some(fan => fan.name === currentFan);
+
+
+  if (!isRegistered && location.pathname.includes("stats.html")) {
+    alert("Please register first.");
+    window.location.href = "register.html";
+  }
+
+
+  if (!isRegistered && location.pathname.includes("leaderboard.html")) {
+    alert("Please register first.");
+    window.location.href = "register.html";
+  }
+
+  
+  if (!isRegistered) {
+    disableLink("nav-stats");
+    disableLink("nav-leaderboard");
+  }
+}
+
+function disableLink(id) {
+  const link = document.getElementById(id);
+  if (link) {
+    link.style.pointerEvents = "none";
+    link.style.opacity = "0.4";
+  }
+}

@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Homepage</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
-<h1>Madridista Login</h1>
+ <body>
+<div class="page">
+  <header class="header">
+    <h1>Madridista Login</h1>
+  </header>
 
-<form id="loginForm">
-  <input type="text" id="name" placeholder="Nickname" required>
-  <button type="submit">Login</button>
-</form>
+  <main class="card">
+    <form id="loginForm">
+      <label>Nickname</label>
+      <input type="text" id="name" required>
+      <button type="submit">Login</button>
+    </form>
+  </main>
+</div>
 
 <script src="script.js"></script>
 </body>
-</html>
