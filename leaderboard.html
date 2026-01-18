@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 <body onload="requireLogin(); showUser();">
 <p id="welcome"></p>
 
 <ul id="list"></ul>
+   <nav class="main-nav">
+    <h2 style="color:white;">Pages</h2>
+    <ul>
+      <a href="index.html">Login</a>
+      <a href="Register.html">Register</a>
+      <a href="statyes.html">Stats</a>
+      <a href="leaderboard.html">Leaderboard</a>
+    </ul>
+  </nav>
 <button onclick="logout()">Logout</button>
-
 <script src="script.js"></script>
 <script>
   fans.sort((a, b) => a.since - b.since);
